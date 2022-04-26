@@ -12,8 +12,14 @@
 }
 
 /* INTEGRANTES */
+$fondo:(texto:rgba(0, 255, 255, 0.267), foto:rgba(8, 71, 71, 0.938));
+@each $item, $color in $fondo{
+  .item-#{$item}{
+    background-color: $color;
+  }
+}
 #grids-container{
-    p{
+  p{
     padding-bottom: 10px;
   }
   h2{
@@ -28,7 +34,6 @@
 }
 .grids-item-uno,
 .grids-item-cuatro {
-  background-color: rgba(0, 255, 255, 0.267);
   border-radius: 5%;
   padding: 3%;
   overflow: visible;
@@ -44,10 +49,8 @@
 }
 .grids-item-dos,
 .grids-item-tres {
-  margin: auto;
-  background-color: rgba(8, 71, 71, 0.938);
+  @include sizes (auto, 2%);
   border-radius: 5%;
-  padding: 2%;
   overflow: visible;
   transition: all 1s;
 }
@@ -89,41 +92,29 @@
   &:hover{
     transform: scale(1.1);  
     } 
-    .animal-header .profile-img {
-      width: 260px;
-      height: 200px;
-      padding-top: 10px;
-      padding-bottom: 15px;
-      position: relative;
-    }
-      button {
-        background-color: #f18e55;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top: 30px;
-        &:hover {
-          background-color: #f34b18;
-        }
-      }
-      .animal-maya{
-       button {
-        background-color: #f18e55;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin: 15px;
-        &:hover{
-          background-color: #f34b18;
-        }
-      }
-    } 
+  .animal-header .profile-img {
+    width: 260px;
+    height: 200px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  
 }
 
+.btn {
+    background-color: #f18e55;
+    @include sizes (15px,12px 20px);
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    &:hover{
+      background-color: #f34b18;
+      a{
+        color: black;
+      }
+    }
+  }
 /* EVENTOS */
 
 .item-media{
@@ -184,17 +175,9 @@
 
     #submit,
     #reset {
-      background-color: #f18e55;
+      @extend .btn;
+      margin-bottom: 20px;  
       color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      &:hover {
-        background-color: #f34b18;
-      }
-  
     }
   }
   #contactos {

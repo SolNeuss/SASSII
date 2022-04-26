@@ -73,6 +73,12 @@ main {
   grid-area: intro; }
 
 /* INTEGRANTES */
+.item-texto {
+  background-color: rgba(0, 255, 255, 0.267); }
+
+.item-foto {
+  background-color: rgba(8, 71, 71, 0.938); }
+
 #grids-container p {
   padding-bottom: 10px; }
 
@@ -84,7 +90,6 @@ main {
 
 .grids-item-uno,
 .grids-item-cuatro {
-  background-color: rgba(0, 255, 255, 0.267);
   border-radius: 5%;
   padding: 3%;
   overflow: visible;
@@ -100,9 +105,8 @@ main {
 .grids-item-dos,
 .grids-item-tres {
   margin: auto;
-  background-color: rgba(8, 71, 71, 0.938);
-  border-radius: 5%;
   padding: 2%;
+  border-radius: 5%;
   overflow: visible;
   transition: all 1s; }
 
@@ -144,26 +148,20 @@ main {
     padding-top: 10px;
     padding-bottom: 15px;
     position: relative; }
-  .animal button {
-    background-color: #f18e55;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 30px; }
-    .animal button:hover {
-      background-color: #f34b18; }
-  .animal .animal-maya button {
-    background-color: #f18e55;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 15px; }
-    .animal .animal-maya button:hover {
-      background-color: #f34b18; }
+
+.btn, #Contacto .forms #submit,
+#Contacto .forms #reset {
+  background-color: #f18e55;
+  margin: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 17px; }
+  .btn:hover, #Contacto .forms #submit:hover,
+  #Contacto .forms #reset:hover {
+    background-color: #f34b18; }
+    .btn:hover a, #Contacto .forms #submit:hover a, #Contacto .forms #reset:hover a {
+      color: black; }
 
 /* EVENTOS */
 .item-media img {
@@ -217,16 +215,8 @@ main {
       text-transform: uppercase; }
     #Contacto .forms #submit,
     #Contacto .forms #reset {
-      background-color: #f18e55;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-bottom: 20px; }
-      #Contacto .forms #submit:hover,
-      #Contacto .forms #reset:hover {
-        background-color: #f34b18; }
+      margin-bottom: 20px;
+      color: white; }
   #Contacto #contactos {
     grid-area: contacto; }
     #Contacto #contactos p {
