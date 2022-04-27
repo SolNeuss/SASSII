@@ -215,7 +215,7 @@ main {
       text-transform: uppercase; }
     #Contacto .forms #submit,
     #Contacto .forms #reset {
-      margin-bottom: 20px;
+      margin-left: 5px;
       color: white; }
   #Contacto #contactos {
     grid-area: contacto; }
